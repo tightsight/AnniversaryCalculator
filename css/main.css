@@ -1,0 +1,49 @@
+ #app, html, body {
+  background-color: #fff;
+  background: #fff;
+ }
+
+ .anniversary-group {
+  /*margin-bottom: 35px;*/
+ }
+
+ .banner {
+  font-size: 32px!important;
+  font-weight: bold;
+ }
+
+ .anniversary-group .title {
+  margin-bottom: 15px;
+ }
+
+ .main-container {
+  padding: 65px 0px;
+  background-color: #fefefe;
+  max-height: 274px;
+ }
+
+ .anniversary-container {
+  padding: 35px;
+  background-color: #fefefe;
+  /*max-height: 145px;*/
+ }
+
+.a-name {
+  font-weight: bold;
+}
+
+ .anniversary-container:nth-child(even) {
+  border: 1px solid #dedede;
+  border-width: 1px 0 1px 0;
+ }
+
+ .anniversary-container.milestone {
+  background-color: #fff8d7
+ }
+
+
+.link-container {
+  padding: 15px;
+  background-color: rgba(230, 53, 51, .75);
+  color: white;
+}
