@@ -3,17 +3,20 @@
   background: #fff;
  }
 
- .anniversary-group {
-  /*margin-bottom: 35px;*/
- }
-
- .banner {
-  font-size: 32px!important;
+.banner {
+  font-size: 24px!important;
   font-weight: bold;
+  margin-bottom: 12px;
  }
 
  .anniversary-group .title {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+ }
+
+ .anniversary-group .date {
+  font-size: 20px;
+  font-weight: normal;
+  color: #777;
  }
 
  .main-container {
@@ -22,8 +25,13 @@
   max-height: 274px;
  }
 
- .anniversary-container {
+ .btn-container {
   padding: 35px;
+  background-color: #fefefe;
+ }
+
+ .anniversary-container {
+  padding: 40px;
   background-color: #fefefe;
   /*max-height: 145px;*/
  }
@@ -32,13 +40,13 @@
   font-weight: bold;
 }
 
- .anniversary-container:nth-child(even) {
-  border: 1px solid #dedede;
-  border-width: 1px 0 1px 0;
+ .anniversary-container:nth-child(odd) {
+  background-color: #f7f7f7;
  }
 
  .anniversary-container.milestone {
-  background-color: #fff8d7
+  background-color: #ffd70070;
+  /*color: #e63533;*/
  }
 
 

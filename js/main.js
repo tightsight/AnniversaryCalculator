@@ -13,6 +13,7 @@ var ONE_BILLION = 1000000000;
 var MAX_YEARS = 100;
 var MAX_MILLION_MINUTES = 53;
 var PI = 3.14159265359;
+var SPEED_OF_LIGHT = 299792458; // m/s, C Seconds =~ 9.5 years.
 
 function dateDifference(d1, d2){
    var difference = {
@@ -161,8 +162,12 @@ var app = new Vue({
       var url = window.location.href + "?year="+aDate.getFullYear()+"&month="+aDate.getMonth()+"&day="+aDate.getDate()+"&hour="+aDate.getHours()+"&minute="+aDate.getMinutes();
       return url;
    },
+   gotoStart : function(){
+      var newURL = window.location.origin + window.location.pathname;
+      window.location.href = newURL;
+   },
    showMore : function (){
-      this.showIndex += 3;
+      this.showIndex += 4;
    },
    showAll : function(){
       this.showIndex = this.allAnniversaries.length;

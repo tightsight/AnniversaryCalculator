@@ -48,41 +48,52 @@
         <v-layout row wrap>
           <v-flex xs12 class="text-xs-center pa-4">
             <div class="anniversary-group">
-              <h3 class="title banner">The Lovely Couple Was Married on</h3>
-              <h1 class="red--text text--darken-1 display-2">{{momentAnniversary.format("dddd, MMMM Do YYYY, [at] h:mm a")}}</h1>
+              <h3 class="banner">The Lovely Couple Was Married on</h3>
+              <h1 class="red--text text--darken-1 display-1">{{momentAnniversary.format("dddd, MMMM Do YYYY, [at] h:mm a")}}</h1>
             </div>
           </v-flex>
         </v-layout>
       </v-container>
-      <v-container fluid class="text-xs-center anniversary-container" v-bind:class="{milestone : upcomingAnniversaries[0].milestone }" >
-            <div class="anniversary-group">
-              <h3 class="title">Their Next Anniversary is <span class="a-name">{{upcomingAnniversaries[0].text}}</span></h3>
-              <h2 class="display-1">{{prettyPrint(upcomingAnniversaries[0].date)}}</h2>
-            </div>
-      </v-container>
-      <v-container fluid class="text-xs-center anniversary-container" v-bind:class="{milestone : upcomingAnniversaries[1].milestone }">
-            <div class="anniversary-group">
-              <h3 class="title">After that is <span class="a-name">{{upcomingAnniversaries[1].text}}</span></h3>
-              <h2 class="display-1">{{prettyPrint(upcomingAnniversaries[1].date)}}</h2>
-            </div>
-      </v-container>
-      <v-container fluid class="text-xs-center anniversary-container" v-bind:class="{milestone : upcomingAnniversaries[2].milestone }">
-            <div class="anniversary-group">
-              <h3 class="title">And then <span class="a-name">{{upcomingAnniversaries[2].text}}</span></h3>
-              <h2 class="display-1">{{prettyPrint(upcomingAnniversaries[2].date)}}</h2>
-            </div>
-      </v-container>
 
-      <v-container fluid class="text-xs-center anniversary-container" v-bind:class="{milestone : item.milestone }" fluid v-if="(showIndex > 2) && (index <= showIndex) && (index > 2)" v-for="(item, index) in upcomingAnniversaries">
-        <div class="anniversary-group">
-          <h3  class="title"><span class="a-name">{{item.text}}</span></h3>
-          <h2 class="display-1">{{prettyPrint(item.date)}}</h2>
-        </div>
-      </v-container>
+      <!-- Container to keep the even/odd css consistent -->
+      <div> 
+        <v-container fluid class="text-xs-center anniversary-container" v-bind:class="{milestone : upcomingAnniversaries[0].milestone }" >
+              <div class="anniversary-group">
+                <h3 class="title">Their Next Anniversary is <span class="a-name">{{upcomingAnniversaries[0].text}}</span></h3>
+                <h2 class="date">{{prettyPrint(upcomingAnniversaries[0].date)}}</h2>
+              </div>
+        </v-container>
+        <v-container fluid class="text-xs-center anniversary-container" v-bind:class="{milestone : upcomingAnniversaries[1].milestone }">
+              <div class="anniversary-group">
+                <h3 class="title">After that is <span class="a-name">{{upcomingAnniversaries[1].text}}</span></h3>
+                <h2 class="date">{{prettyPrint(upcomingAnniversaries[1].date)}}</h2>
+              </div>
+        </v-container>
+        <v-container fluid class="text-xs-center anniversary-container" v-bind:class="{milestone : upcomingAnniversaries[2].milestone }">
+              <div class="anniversary-group">
+                <h3 class="title">And then <span class="a-name">{{upcomingAnniversaries[2].text}}</span></h3>
+                <h2 class="date">{{prettyPrint(upcomingAnniversaries[2].date)}}</h2>
+              </div>
+        </v-container>
+<!--         <v-container fluid class="text-xs-center anniversary-container" v-bind:class="{milestone : upcomingAnniversaries[3].milestone }">
+              <div class="anniversary-group">
+                <h3 class="title">Followed by <span class="a-name">{{upcomingAnniversaries[3].text}}</span></h3>
+                <h2 class="date">{{prettyPrint(upcomingAnniversaries[3].date)}}</h2>
+              </div>
+        </v-container>
+ -->
+        <v-container fluid class="text-xs-center anniversary-container" v-bind:class="{milestone : item.milestone }" fluid v-if="(showIndex > 2) && (index <= showIndex) && (index > 2)" v-for="(item, index) in upcomingAnniversaries">
+          <div class="anniversary-group">
+            <h3  class="title"><span class="a-name">{{item.text}}</span></h3>
+            <h2 class="date">{{prettyPrint(item.date)}}</h2>
+          </div>
+        </v-container>
+      </div>
 
-      <v-container fluid class="text-xs-center anniversary-container" v-show="showIndex != allAnniversaries.length">
-        <v-btn  class="red--text text--darken-1" outline @click="showMore">Show More</v-btn>
-        <v-btn  class="red--text text--darken-1" outline @click="showIndex = allAnniversaries.length">Show All {{allAnniversaries.length}} Anniversaries</v-btn>
+      <v-container fluid class="text-xs-center btn-container" v-show="showIndex != allAnniversaries.length">
+        <v-btn   outline @click="showMore">Show More Anniversaries</v-btn>
+        <v-btn   outline @click="showIndex = allAnniversaries.length">Show All ({{allAnniversaries.length}})</v-btn>
+        <v-btn   flat @click="gotoStart()">Choose a Different Date</v-btn>
       </v-container>
     </template> <!-- /dateSelected -->
 
@@ -108,7 +119,7 @@
 
         <h1 class="mb-3">{{secondsMarried.toLocaleString()}} Seconds</h1>
       </v-flex> --> 
-      
+
      </v-app>
     </div>
 
