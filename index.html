@@ -96,13 +96,12 @@
           <div class="anniversary-group">
             <h3  class="title"><span class="a-name">{{item.text}}</span></h3>
             <h2 class="date">{{prettyPrint(item.date)}}</h2>
-                            <!-- <div class="divider"></div> -->
           </div>
         </v-container>
       </div>
 
       <v-container fluid class="text-xs-center btn-container" v-show="showIndex != allAnniversaries.length">
-        <v-btn   outline @click="showMore">Show More Anniversaries</v-btn>
+        <v-btn   outline @click="showMore()">Show More Anniversaries</v-btn>
         <v-btn   outline @click="showIndex = allAnniversaries.length">Show All ({{allAnniversaries.length}})</v-btn>
         <v-btn   flat @click="gotoStart()">Choose a Different Date</v-btn>
       </v-container>
