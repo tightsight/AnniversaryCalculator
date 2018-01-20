@@ -59,7 +59,7 @@
           <v-flex xs12 class="text-xs-center pa-4">
             <div class="anniversary-group">
               <h3 class="banner">The Lovely Couple Was Married on</h3>
-              <h1 class="red--text text--darken-1 display-1">{{momentAnniversary.format("dddd, MMMM Do YYYY, [at] h:mm a")}}</h1>
+              <h1 class="married-date display-1">{{momentAnniversary.format("dddd, MMMM Do YYYY, [at] h:mm a")}}</h1>
             </div>
           </v-flex>
         </v-layout>
@@ -96,6 +96,7 @@
           <div class="anniversary-group">
             <h3  class="title"><span class="a-name">{{item.text}}</span></h3>
             <h2 class="date">{{prettyPrint(item.date)}}</h2>
+                            <!-- <div class="divider"></div> -->
           </div>
         </v-container>
       </div>
