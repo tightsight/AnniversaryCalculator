@@ -40,9 +40,7 @@
  .anniversary-container {
   padding: 40px;
   background-color: #fefefe;
-  /*max-height: 145px;*/
-  border-top: 1px solid #f4f4f4;
-
+  border-top: 1px solid #e6e6e6;
  }
 
 .a-name {
@@ -55,7 +53,8 @@
 }
 
 .anniversary-container.milestone .date{
-  color:#b5a158
+  /*color:#b5a158*/
+  color: #96803d;
  }
 
 
